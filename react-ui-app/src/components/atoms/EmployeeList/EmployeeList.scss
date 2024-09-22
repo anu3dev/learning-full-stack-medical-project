@@ -1,0 +1,41 @@
+@import '../../../styles//main.scss';
+
+.employeeList {
+    max-width: 38rem;
+
+    p {
+        text-align: end;
+    }
+    &__content {
+        overflow-x: auto;
+        margin: 0;
+
+        &__table {
+            min-width: max-content;
+    
+            table {
+                border-collapse: collapse;
+            }
+              
+            td, th {
+                border: .125rem solid #dddddd;
+                text-align: left;
+                padding: .5rem;
+            }
+              
+            tr:nth-child(even) {
+                background-color: #cdd1cc;
+            }
+    
+            td:last-child {
+                min-width: 12rem;
+            }
+        }
+    }
+}
+
+@include sm-screen {
+    .employeeList {
+        margin: 0 1rem;
+    }
+}

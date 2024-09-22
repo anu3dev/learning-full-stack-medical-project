@@ -1,4 +1,9 @@
+@import '../../../styles//main.scss';
+
 .contactUsScreen {
+    max-width: 36rem;
+    margin: 0 auto;
+    
     form {
         display: flex;
         flex-direction: column;
@@ -12,5 +17,11 @@
             margin: .25rem 0;
             font-size: 1.5rem;
         }
+    }
+}
+
+@include sm-screen {
+    .contactUsScreen {
+        margin: 0 1rem;
     }
 }
