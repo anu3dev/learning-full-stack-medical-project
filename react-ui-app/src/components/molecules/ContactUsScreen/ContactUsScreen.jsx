@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './ContactUsScreen.scss'
 import Button from '../../atoms/Button/Button'
+import { sendContactEmail } from '../../../utils/serviceUtils'
 
 const ContactUsScreen = () => {
   const [emailId, setEmailId] = useState('')
   const [message, setMessage] = useState('')
 
   const sendEmail = () => {
+    sendContactEmail({ emailId: emailId, message })
     window.location.assign('/')
   }
   const backBtn = () => {

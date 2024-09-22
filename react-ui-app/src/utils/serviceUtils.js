@@ -1,4 +1,4 @@
-import { BASE_EMP_URL } from '../constants'
+import { BASE_EML_URL, BASE_EMP_URL } from '../constants'
 
 export const fetchEmployeeList = async (setEmpList) => {
   const url = `${BASE_EMP_URL}employees`
@@ -55,6 +55,19 @@ export const updateEmployeeData = (formData, ids) => {
   const url = `${BASE_EMP_URL}updateEmployee/${ids}`
   fetch(url, {
     method: 'PUT',
+    body: JSON.stringify(formData),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+}
+
+export const sendContactEmail = (formData) => {
+  const url = `${BASE_EML_URL}contact`
+  fetch(url, {
+    method: 'POST',
     body: JSON.stringify(formData),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',

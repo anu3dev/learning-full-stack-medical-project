@@ -33,7 +33,7 @@ public class EmailService implements IEmailService {
 		emailMessage.setCc("boss@company.com");
 		emailMessage.setTo(email.getEmailId());
 		emailMessage.setSubject("We have received your query");
-		emailMessage.setText("Your query is - " + email.getMessage());
+		emailMessage.setText(email.getMessage());
 		emailMessage.setSentDate(new Date());
 		emailMessage.addAttachment("welcome-kit.pdf", new ClassPathResource("welcome-kit.pdf"));
 		sender.send(mimeMessage);
