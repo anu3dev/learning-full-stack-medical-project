@@ -1,0 +1,77 @@
+.buttonComp {
+    &__btn {
+        padding: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition-duration: 0.4s;
+    }
+    
+    &__actionBtn {
+        margin: 0 0.5rem;
+    }
+    &__addDetails, &__contactPage {
+        margin: 0 0 0 0.5rem;
+    }
+    &__headerComp {
+        margin: 0.5rem 0;
+    }
+
+    &__update {
+        color: white;
+        background-color: #04AA6D;
+        border: .125rem solid #04AA6D;
+    }
+
+    &__delete {
+        color: white;
+        background-color: #f44336;
+        border: .125rem solid  #f44336;
+    }
+
+    &__save {
+        color: white;
+        background-color: #04AA6D;
+        border: .125rem solid #04AA6D;
+    }
+
+    &__cancel {
+        color: white;
+        background-color: #555555;
+        border: .125rem solid #555555;
+    }
+
+    &__add {
+        color: white;
+        background-color: #008CBA;
+        border: .125rem solid #008CBA;
+    }
+
+    &__update:hover, &__delete:hover, &__save:hover, &__cancel:hover, &__add:hover {
+        color: black;
+        background-color: white;
+    }
+
+    &__contact, &__signin {
+        border: .125rem solid white;
+        background-color: transparent;
+    }
+    &__contact:hover, &__signin:hover {
+        background-color: chocolate;
+        color: white;
+    }
+}
+
+.buttonGroup {
+    &__actionBtn {
+        text-align: center;
+    }
+    
+    &__addDetails, &__contactPage {
+        text-align: end;
+    }
+
+    &__headerComp {
+        text-align: end;
+    }
+}
