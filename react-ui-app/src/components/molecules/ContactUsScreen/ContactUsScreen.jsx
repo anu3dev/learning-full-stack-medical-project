@@ -28,7 +28,7 @@ const ContactUsScreen = () => {
 
   return (
     <div className="contactUsScreen">
-      <h1> Contact us </h1>
+      <h1> Contact us:- </h1>
       <div className="employeeAddScreen__form">
         <form>
           <label>

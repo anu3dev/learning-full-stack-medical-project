@@ -1,4 +1,9 @@
+@import '../../../styles//main.scss';
+
 .employeeAddScreen {
+    max-width: 36rem;
+    margin: 0 auto;
+
     &__form {
         form {
             display: flex;
@@ -14,5 +19,11 @@
                 font-size: 1.5rem;
             }
         }
+    }
+}
+
+@include sm-screen {
+    .employeeAddScreen {
+        margin: 0 1rem;
     }
 }

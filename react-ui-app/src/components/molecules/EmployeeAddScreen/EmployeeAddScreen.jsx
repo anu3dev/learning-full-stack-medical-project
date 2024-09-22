@@ -45,7 +45,7 @@ const EmployeeAddScreen = () => {
     },
   ]
 
-  const headingVal = `${isUpdateAction ? 'Update' : 'Add'} Employee`
+  const headingVal = `${isUpdateAction ? 'Update' : 'Add'} Employee:-`
 
   return (
     <div className="employeeAddScreen">
