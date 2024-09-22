@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import './EmployeeListScreen.scss'
+import './WelcomeScreen.scss'
 import { fetchEmployeeList, deleteEmployeeList } from '../../../utils/serviceUtils'
 import Button from '../../atoms/Button/Button'
 
-const EmployeeListScreen = () => {
+const WelcomeScreen = () => {
   const [empList, setEmpList] = useState([])
 
   useEffect(() => {
@@ -42,15 +42,14 @@ const EmployeeListScreen = () => {
   ]
 
   return (
-    <div className="employeeListScreen">
-      <div className="employeeListScreen__table">
+    <div className="welcomeScreen">
+      <div className="welcomeScreen__table">
         <h1>Employee List:</h1>
         <p>
           <Button btnProp={btnArr} />
         </p>
         <table>
           <tr>
-            <th>ID</th>
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
@@ -58,7 +57,6 @@ const EmployeeListScreen = () => {
           </tr>
           {empList.map((item, index) => (
             <tr key={index}>
-              <td>{item.id}</td>
               <td>{item.firstName}</td>
               <td>{item.lastName}</td>
               <td>{item.emailId}</td>
@@ -73,4 +71,4 @@ const EmployeeListScreen = () => {
   )
 }
 
-export default EmployeeListScreen
+export default WelcomeScreen

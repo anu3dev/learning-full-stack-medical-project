@@ -2,7 +2,7 @@ import React, { lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from '../components/atoms/Header'
 
-export const EmployeeListScreen = lazy(() => import('../components/molecules/EmployeeListScreen'))
+export const WelcomeScreen = lazy(() => import('../components/molecules/WelcomeScreen'))
 export const EmployeeAddScreen = lazy(() => import('../components/molecules/EmployeeAddScreen'))
 export const ContactUsScreen = lazy(() => import('../components/molecules/ContactUsScreen'))
 
@@ -17,7 +17,7 @@ const SelectedRoutes = () => {
       routes = <ContactUsScreen />
       break
     default:
-      routes = <EmployeeListScreen />
+      routes = <WelcomeScreen />
       break
   }
 

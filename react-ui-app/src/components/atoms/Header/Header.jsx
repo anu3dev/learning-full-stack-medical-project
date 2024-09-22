@@ -11,7 +11,7 @@ const Header = () => {
   const handleLogin = () => {}
   const handleLogout = () => {}
 
-  const footerBtnArr = [
+  const btnArr = [
     {
       name: 'Contact',
       action: handleContact,
@@ -25,8 +25,8 @@ const Header = () => {
   ]
 
   return (
-    <div className="haederComp">
-      <Button btnProp={footerBtnArr} origin="headerComp" />
+    <div className="headerComp">
+      <Button btnProp={btnArr} origin="headerComp" />
     </div>
   )
 }
