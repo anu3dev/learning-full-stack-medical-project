@@ -8,7 +8,9 @@ const Header = () => {
   const handleContact = () => {
     window.location.assign('/contact')
   }
-  const handleLogin = () => {}
+  const handleLogin = () => {
+    window.location.assign('/login')
+  }
   const handleLogout = () => {}
 
   const btnArr = [
@@ -21,6 +23,11 @@ const Header = () => {
       name: isUserLoggedIn ? 'Logout' : 'Login',
       action: isUserLoggedIn ? handleLogout : handleLogin,
       type: 'signin',
+    },
+    {
+      name: 'Hello Guest',
+      action: '',
+      type: 'intro',
     },
   ]
 

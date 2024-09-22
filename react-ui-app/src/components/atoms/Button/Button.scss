@@ -52,11 +52,11 @@
         background-color: white;
     }
 
-    &__contact, &__signin {
+    &__contact, &__signin, &__intro {
         border: .125rem solid white;
         background-color: transparent;
     }
-    &__contact:hover, &__signin:hover {
+    &__contact:hover, &__signin:hover, &__intro:hover {
         background-color: chocolate;
         color: white;
     }

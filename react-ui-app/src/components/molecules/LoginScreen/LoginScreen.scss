@@ -1,0 +1,27 @@
+@import '../../../styles//main.scss';
+
+.loginScreen {
+    max-width: 36rem;
+    margin: 0 auto;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin: .5rem 0;
+        font-weight: 600;
+        input, textarea {
+            width: -webkit-fill-available;
+            padding: .125rem;
+            margin: .25rem 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include sm-screen {
+    .loginScreen {
+        margin: 0 1rem;
+    }
+}

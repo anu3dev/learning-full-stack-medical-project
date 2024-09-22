@@ -5,6 +5,7 @@ import Header from '../components/atoms/Header'
 export const WelcomeScreen = lazy(() => import('../components/molecules/WelcomeScreen'))
 export const EmployeeAddScreen = lazy(() => import('../components/molecules/EmployeeAddScreen'))
 export const ContactUsScreen = lazy(() => import('../components/molecules/ContactUsScreen'))
+export const LoginScreen = lazy(() => import('../components/molecules/LoginScreen'))
 
 const SelectedRoutes = () => {
   let routes = null
@@ -15,6 +16,9 @@ const SelectedRoutes = () => {
       break
     case 'contact':
       routes = <ContactUsScreen />
+      break
+    case 'login':
+      routes = <LoginScreen />
       break
     default:
       routes = <WelcomeScreen />
