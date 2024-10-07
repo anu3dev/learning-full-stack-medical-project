@@ -12,6 +12,7 @@ const Header = () => {
     window.location.assign('/login')
   }
   const handleLogout = () => {}
+  const dummyMethod = () => {}
 
   const btnArr = [
     {
@@ -26,7 +27,7 @@ const Header = () => {
     },
     {
       name: 'Hello Guest',
-      action: '',
+      action: dummyMethod,
       type: 'intro',
     },
   ]
