@@ -5,12 +5,12 @@ import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 
-import com.anu3dev.model.Employee;
+import com.anu3dev.model.EmployeeList;
 
 public interface IEmployeeService {
-	public List<Employee> getAllEmployee();
-	public Employee saveEmployeeData(Employee emp);
-	public ResponseEntity<Employee> getEmployeeData(Long id);
-	public ResponseEntity<Employee> updateEmpoyeeData(Long id, Employee emp);
+	public List<EmployeeList> getAllEmployee();
+	public EmployeeList saveEmployeeData(EmployeeList emp);
+	public ResponseEntity<EmployeeList> getEmployeeData(Long id);
+	public ResponseEntity<EmployeeList> updateEmpoyeeData(Long id, EmployeeList emp);
 	public ResponseEntity<Map<String, Boolean>> deleteEmployeeData(Long id);
 }

@@ -6,19 +6,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.anu3dev.dao.UsersDAO;
+import com.anu3dev.dao.UserLoginDAO;
 import com.anu3dev.model.UserPrincipal;
-import com.anu3dev.model.Users;
+import com.anu3dev.model.UserLogin;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private UsersDAO userRepo;
+    private UserLoginDAO dao;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Users user = userRepo.findByUsername(username);
+        UserLogin user = dao.findByUsername(username);
         if (user == null) {
             System.out.println("User Not Found");
             throw new UsernameNotFoundException("user not found");

@@ -15,7 +15,7 @@ import lombok.Data;
 @Entity
 @Table(name="employees")
 @Data
-public class Employee {
+public class EmployeeList {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
@@ -26,9 +26,9 @@ public class Employee {
 	@Column(name="email_id")
 	private String emailId;
 	
-	public Employee() {}
+	public EmployeeList() {}
 	
-	public Employee(long id, String firstName, String lastName, String emailId) {
+	public EmployeeList(long id, String firstName, String lastName, String emailId) {
 		super();
 		this.id = id;
 		this.firstName = firstName;

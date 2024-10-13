@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.anu3dev.model.Employee;
+import com.anu3dev.model.EmployeeList;
 import com.anu3dev.service.IEmployeeService;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -26,22 +26,22 @@ public class EmployeeController {
 	private IEmployeeService empSer;
 	
 	@GetMapping("/employees")
-	public List<Employee> getAllEmp(){
+	public List<EmployeeList> getAllEmp(){
 		return empSer.getAllEmployee();
 	}
 	
 	@PostMapping("/addEmployee")
-	public Employee addEmp(@RequestBody Employee emp) {
+	public EmployeeList addEmp(@RequestBody EmployeeList emp) {
 		return empSer.saveEmployeeData(emp);
 	}
 	
 	@GetMapping("/getEmployee/{id}")
-	public ResponseEntity<Employee> getEmp(@PathVariable Long id) {
+	public ResponseEntity<EmployeeList> getEmp(@PathVariable Long id) {
 		return empSer.getEmployeeData(id);
 	}
 	
 	@PutMapping("/updateEmployee/{id}")
-	public ResponseEntity<Employee> updateEmp(@PathVariable Long id, @RequestBody Employee emp) {
+	public ResponseEntity<EmployeeList> updateEmp(@PathVariable Long id, @RequestBody EmployeeList emp) {
 		return empSer.updateEmpoyeeData(id, emp);
 	}
 	
