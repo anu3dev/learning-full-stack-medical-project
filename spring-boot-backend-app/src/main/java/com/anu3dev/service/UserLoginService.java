@@ -24,10 +24,10 @@ public class UserLoginService {
 
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
     
-    public UserLogin register(UserLogin user) {
+    public String register(UserLogin user) {
         user.setPassword(encoder.encode(user.getPassword()));
         dao.save(user);
-        return user;
+        return "registration successful";
     }
     
     public String verify(UserLogin user) {
