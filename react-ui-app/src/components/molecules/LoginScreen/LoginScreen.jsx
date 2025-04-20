@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
-import './LoginScreen.scss'
-import Button from '../../atoms/Button/Button'
+import React, { useState } from "react"
+import "./LoginScreen.scss"
+import Button from "../../atoms/Button/Button"
 
 const LoginScreen = () => {
-  const [emailId, setEmailId] = useState('')
-  const [password, setPassword] = useState('')
+  const [emailId, setEmailId] = useState("")
+  const [password, setPassword] = useState("")
 
   const sendEmail = () => {
-    window.location.assign('/')
+    window.location.assign("/")
   }
   const backBtn = () => {
-    window.location.assign('/')
+    window.location.assign("/")
   }
 
   const footerBtnArr = [
     {
-      name: 'Login',
+      name: "Login",
       action: sendEmail,
-      type: 'save',
+      type: "save",
     },
     {
-      name: 'Cancel',
+      name: "Cancel",
       action: backBtn,
-      type: 'cancel',
+      type: "cancel",
     },
   ]
 

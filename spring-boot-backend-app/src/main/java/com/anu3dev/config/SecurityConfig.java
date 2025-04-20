@@ -16,21 +16,29 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.anu3dev.exception.CustomAccessDeniedHandler;
+import com.anu3dev.exception.CustomAuthenticationEntryPoint;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 	
 	@Autowired
     private JWTFilterConfig jwtFilter;
-	
 	@Autowired
 	private UserDetailsService userDetailsService;
+	@Autowired
+    private CustomAuthenticationEntryPoint authenticationEntryPoint;
+    @Autowired
+    private CustomAccessDeniedHandler accessDeniedHandler;
 	
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 						
 		return http
 				.csrf(customizer -> customizer.disable())
+				.exceptionHandling(exception -> exception.accessDeniedHandler(accessDeniedHandler)
+                        .authenticationEntryPoint(authenticationEntryPoint))
 				.authorizeHttpRequests(request -> request
 						// "/employee/v1/getEmployee/*"
 						.requestMatchers("/user/v1/login", "/email/v1/contact", "/employee/v1/employees").permitAll()

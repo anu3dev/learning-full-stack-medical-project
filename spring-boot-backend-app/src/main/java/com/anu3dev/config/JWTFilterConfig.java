@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -64,7 +63,6 @@ public class JWTFilterConfig extends OncePerRequestFilter {
         } catch (MalformedJwtException e) {
             new ResourceUnAuthorizedException("Invalid JWT token");
         } catch (SignatureException e) {
-        	response.setStatus(HttpStatus.FORBIDDEN.value());
             new ResourceUnAuthorizedException("Invalid JWT signature");
         } catch (IllegalArgumentException e) {
             new ResourceUnAuthorizedException("JWT claims are invalid");

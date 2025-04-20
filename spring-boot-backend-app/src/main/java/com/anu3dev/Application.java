@@ -9,3 +9,16 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 }
+
+/*
+ * @component - spring will take care of object creation
+ * 
+ * @component and @bean
+ * @controller and @RestController
+ * @Service an d@repository
+ * @Configuration 
+ * 
+ * 
+ * @Override
+ * 
+ */
